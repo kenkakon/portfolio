@@ -1,0 +1,26 @@
+// выше значений 640px, 768px, 1920px
+$breakpoints-up: (
+	'small': '640px',
+	'medium': '768px',
+	'large': '1920px',
+);
+
+// ниже значений 640px, 768px, 1920px
+$breakpoints-down: (
+	'small': '640px',
+	'medium': '768px',
+	'large': '1200px',
+	'Extra extra large': '1920px',
+);
+
+@mixin breakpoint($size) {
+	@media (min-width: map-get($breakpoints-up, $size)) {
+		@content;
+	}
+}
+
+@mixin breakpoint-down($size) {
+	@media (max-width: map-get($breakpoints-down, $size)) {
+		@content;
+	}
+}

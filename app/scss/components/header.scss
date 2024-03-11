@@ -1,0 +1,14 @@
+@use '../utils/'as *;
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header img {
+    width: rem(45);
+    height: rem(45);
+    z-index: 1;
+}

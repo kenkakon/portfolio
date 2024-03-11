@@ -1,0 +1,30 @@
+@use '../utils/'as *;
+
+.skills {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding-top: rem(104);
+
+    &__names {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr 0.5fr;
+        grid-template-rows: 1fr;
+        gap: rem(140);
+        justify-items: center;
+
+        .skill {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .experience {
+                padding-top: rem(14);
+                text-decoration: underline solid var(--underline);
+                text-underline-offset: rem(2);
+                text-underline-position: under;
+            }
+        }
+    }
+}

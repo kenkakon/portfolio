@@ -1,0 +1,90 @@
+@use '../utils/'as *;
+
+
+.projects {
+    position: relative;
+    padding-top: rem(111);
+
+    .projects__title {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+
+        .name_flex__contact {
+            justify-self: end;
+        }
+    }
+
+    .projects__rings {
+        position: absolute;
+        left: 90%;
+        top: 7%;
+        z-index: -1;
+        width: rem(530);
+        height: auto;
+
+        @include breakpoint-down (medium) {
+            right: 57%;
+            top: 17%;
+        }
+    }
+
+
+    &__card {
+        padding-top: rem(80);
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, 1fr);
+        gap: rem(69) rem(30);
+
+        &__wrapper {
+            &__picture {
+                display: flex;
+
+                picture {
+                    position: relative;
+
+                    img {
+                        display: block;
+                        width: rem(545);
+                        height: auto;
+                    }
+
+
+                    .projects__card__wrapper__picture__tags {
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        top: 0;
+                        left: 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-direction: column;
+                        background-color: rgba(0, 0, 0, 0.8);
+                        opacity: 0;
+                        gap: rem(60);
+                        transition: ease-in-out 0.3s;
+                    }
+
+                    .projects__card__wrapper__picture__tags:hover {
+                        opacity: 1;
+                    }
+                }
+
+            }
+
+            &__text {
+                display: flex;
+                flex-direction: column;
+                gap: rem(7);
+                padding-top: rem(20);
+
+                &__lang {
+                    display: flex;
+                    gap: rem(18);
+                }
+            }
+        }
+    }
+}

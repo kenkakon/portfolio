@@ -1,0 +1,62 @@
+@use '../utils/' as *;
+
+h1, h2, h3, p{
+    margin: 0;
+}
+h1, h2, h3, a{
+    font-family: var(--font-space);
+    color: var(--text);
+}
+
+a, a:visited{
+    font-size: rem(16);
+    font-weight: 700;
+    line-height: rem(26);
+    letter-spacing: rem(2.28571);
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+a:hover, a:active{
+    color: var(--underline);
+    text-decoration: underline solid 2px var(--underline);
+    text-underline-offset: rem(10);
+    text-underline-position: under;
+}
+
+h1{
+    font-size: rem(88);
+    font-weight: 700;
+    line-height: rem(104);
+    letter-spacing: rem(-2.5);
+
+    @include breakpoint-down (medium){
+        font-size: rem(75);
+    }
+}
+
+h2 {
+    font-size: rem(48);
+    font-weight: 700;
+    line-height: rem(56);
+    letter-spacing: rem(-1.5);
+    @include breakpoint-down (medium){
+        font-size: rem(32);
+    }
+}
+
+h3{
+    font-size: rem(24);
+    line-height: rem(32);
+    font-weight: 700;
+}
+
+p, span{
+    font-family: var(--font-space);
+    font-size: rem(18);
+    font-weight: 500;
+    line-height: rem(28);
+    color: var(--text2);
+}
+
+

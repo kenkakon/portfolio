@@ -1,0 +1,33 @@
+@use '../utils/'as *;
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  padding: rem(39) rem(200) rem(92) rem(200);
+  margin: 0;
+  background-color: var(--background);
+
+  @include breakpoint-down(medium) {
+    padding: rem(45) rem(18) 0 rem(18);
+  }
+
+  @include breakpoint-down(small) {
+    padding: rem(20) rem(16) 0 rem(16);
+  }
+}
