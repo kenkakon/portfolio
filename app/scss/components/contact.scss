@@ -1,0 +1,108 @@
+@use '../utils/'as *;
+
+.contact {
+    width: 100%;
+    margin-top: rem(117);
+    padding: rem(84) rem(165) 0 rem(165);
+    background-color: var(--interactive-bg);
+
+    .bottom-border {
+        position: relative;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: rem(220);
+
+        @include breakpoint-down (medium) {
+            right: 57%;
+            top: 17%;
+        }
+
+        .contact__rings {
+            position: absolute;
+            left: -30%;
+            bottom: 3%;
+            z-index: 1;
+            width: rem(530);
+            height: auto;
+        }
+
+        .contact__left {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            width: 75%;
+
+            &__text h1 {
+                padding-bottom: rem(36);
+            }
+        }
+
+        .contact__right {
+
+            .contact__control input,
+            .contact__control textarea {
+                width: 100%;
+                padding-block: rem(16);
+                padding-inline: rem(24);
+                border: none;
+                border-bottom: 1px solid var(--text);
+                background: transparent;
+                font-size: 1rem;
+                line-height: 1.625;
+                color: var(--text);
+            }
+
+            .contact__control>*::placeholder {
+                color: var(--text);
+                opacity: 0.5;
+                text-transform: uppercase;
+            }
+
+            .contact__control textarea {
+                margin-block-end: rem(32);
+            }
+
+            .contact__control.align-right {
+                display: flex;
+                justify-content: flex-end;
+
+                button {
+                    font-family: var(--font-space);
+                    color: var(--text);
+                    font-weight: 700;
+                    line-height: rem(26);
+                    letter-spacing: rem(2.28571);
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    background-color: transparent;
+                    border: none;
+                }
+
+                button:hover {
+                    color: var(--underline);
+                    text-decoration: underline solid 2px var(--underline);
+                    text-underline-offset: rem(10);
+                    text-underline-position: under;
+                }
+            }
+
+            .contact__invalid-icon {
+                display: none;
+                width: rem(24);
+                height: rem(24);
+                position: absolute;
+                top: 50%;
+                right: 0;
+                translate: -50% -50%;
+            }
+        }
+
+        hr {
+            height: rem(1);
+            background-color: var(--text);
+            width: 100%;
+            margin-top: rem(92);
+        }
+    }
+
+}

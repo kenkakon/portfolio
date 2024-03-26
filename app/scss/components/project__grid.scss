@@ -2,10 +2,11 @@
 
 
 .projects {
-    position: relative;
+
     padding-top: rem(111);
 
     .projects__title {
+        position: relative;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
@@ -13,22 +14,21 @@
         .name_flex__contact {
             justify-self: end;
         }
-    }
 
-    .projects__rings {
-        position: absolute;
-        left: 90%;
-        top: 7%;
-        z-index: -1;
-        width: rem(530);
-        height: auto;
+        .projects__rings {
+            position: absolute;
+            left: 92%;
+            bottom: 3%;
+            z-index: -1;
+            width: rem(530);
+            height: auto;
 
-        @include breakpoint-down (medium) {
-            right: 57%;
-            top: 17%;
+            @include breakpoint-down (medium) {
+                right: 57%;
+                top: 17%;
+            }
         }
     }
-
 
     &__card {
         padding-top: rem(80);
